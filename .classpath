@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/ACHUS/Documents/workspace/Babbel/References/commons-lang3-3.11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ACHUS/Documents/workspace/Babbel/References/commons-lang3-3.11-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ACHUS/Documents/workspace/Babbel/References/commons-lang3-3.11-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ACHUS/Documents/workspace/Babbel/References/commons-lang3-3.11-tests.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ACHUS/Documents/workspace/Babbel/References/commons-lang3-3.11-test-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ACHUS/Documents/workspace/Babbel/References/java-client-3.4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ACHUS/Documents/workspace/Babbel/References/java-json.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ACHUS/Documents/workspace/Babbel/References/jsoup-1.10.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ACHUS/Documents/workspace/Babbel/References/log4j-1.2-api-2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ACHUS/Documents/workspace/Babbel/References/log4j-api-2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ACHUS/Documents/workspace/Babbel/References/log4j-core-2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ACHUS/Documents/workspace/Babbel/References/log4j-web-2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ACHUS/Documents/workspace/Babbel/References/reportng-1.1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ACHUS/Documents/workspace/Babbel/References/testng-6.14.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ACHUS/Documents/workspace/Babbel/References/velocity-dep-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ACHUS/Documents/workspace/Babbel/References/selenium-server-standalone-2.53.1.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
