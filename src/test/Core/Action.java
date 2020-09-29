@@ -116,9 +116,26 @@ public class Action<IWebElement> {
 		return this;
 	}
 	
+		public Action javascriptClick(LocatorObject locator){
+			element =FindElement(locator);
+			JavascriptExecutor executor = (JavascriptExecutor)driver;
+			executor.executeScript("arguments[0].click();", element);
+			return this;
+		}
 		
-	
-	
+		public boolean IsVisible(LocatorObject locator)
+		{
+		  
+			WaitForPageLoad();
+			if(driver.findElements(locator.locatorValue).size()>0)
+		  {
+			return true;
+		  }
+			else
+			{
+				return false;
+			}
+		}
 	public  Action driverwait(long time)
 	{
 		driver.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
@@ -141,10 +158,6 @@ public class Action<IWebElement> {
 			
 			
 			
-			//WebElement elem = driver.findElement(locator.locatorValue);
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", driver.findElement(locator.locatorValue));
-			
 			return driver.findElement(locator.locatorValue);
 		} catch (org.openqa.selenium.NoSuchElementException ex) {
 			// Handle exception if the element is not found
@@ -156,9 +169,6 @@ public class Action<IWebElement> {
 			
 					WebDriverWait.until(ExpectedConditions.presenceOfElementLocated(locator.locatorValue));
 			
-		//	WebElement elem = driver.findElement(locator.locatorValue);
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", driver.findElement(locator.locatorValue));
 			
 			return driver.findElement(locator.locatorValue);
 			
@@ -374,7 +384,15 @@ public String GetCurrentUrl(){
 		}
 		
 		
-	
+		public Action wait(int time){
+	    	try {
+				Thread.sleep(time);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    	return this;
+	    }
 	
     public WebElement fluentWait(final LocatorObject locator) {
                      Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)

@@ -19,6 +19,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.HashMap;
 
 import org.openqa.selenium.Capabilities;
@@ -57,7 +59,8 @@ public class TestBase {
 	static IMethodInstance instns=null;
 	static String strTestCaseID;
 	static ITestResult result;
-	
+	public static Instant teststart;
+	public static Instant testend;
 	
 	
 	
@@ -113,6 +116,7 @@ public class TestBase {
 		{
 			driver = driverFactory.getDriver(Browser,ReadProperties.Properties("SeleniumServer"),ReadProperties.Properties("ServerPort"));
 			driver.manage().window().maximize();
+			teststart = Instant.now();
 		}
 				
 		
@@ -149,7 +153,12 @@ public class TestBase {
 			//	driver.close();
 			//	driver.manage().deleteAllCookies();
 				 driver.quit();		
-			
+				 testend = Instant.now();
+					Duration testDuration = Duration.between(teststart, testend);
+					double min;
+					min = (testDuration.toMillis() / 1000.0) / 60.0;
+					double mili = testDuration.toMillis();
+					log.Info("Time taken for the test: " + (Math.round(min * 100.0) / 100.0) + " Minutes");
 		}
 		
 		
