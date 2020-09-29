@@ -97,7 +97,7 @@ public class Action<IWebElement> {
 	public  Action Click(LocatorObject locator)
 	{
 		driverwait(5);
-		//FindElement(locator).sendKeys(Keys.TAB);
+		
 		FindElement(locator).click();
 		driverwait(10);
 		return this;
