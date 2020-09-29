@@ -78,13 +78,9 @@ public class Action<IWebElement> {
 //</revision>
 	public  Action OpenURl(String url)
 	{
-//		System.out.println(url);
-//		try {
+		
 			driver.navigate().to(url);	
-//		} catch (Exception e) {
-//			// TODO: handle exception
-//			System.err.println(e);
-//		}
+		
 		
 		return this;
 	}
